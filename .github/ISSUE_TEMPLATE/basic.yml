@@ -1,0 +1,53 @@
+name: 🛠️ New Issue
+description: Quickly report a bug, suggest a feature, or document a task.
+title: "[Module] Short summary"
+labels: ["needs triage"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Bug 🐛
+        - Feature ✨
+        - Task 📋
+        - Question ❓
+    validations:
+      required: true
+
+  - type: input
+    id: module
+    attributes:
+      label: Area / Module
+      placeholder: "e.g. Attendance, Dashboard, Exams"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: |
+        What is the issue or suggestion?
+        Be concise but clear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps / Notes (optional)
+      placeholder: |
+        For bugs: how to reproduce.
+        For features: any relevant notes.
+        For tasks: what needs to be done.
+    validations:
+      required: false
+
+  - type: input
+    id: related
+    attributes:
+      label: Related Issues or PRs (optional)
+      placeholder: "#23, #44"
+    validations:
+      required: false
