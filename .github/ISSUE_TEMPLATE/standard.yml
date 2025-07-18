@@ -1,0 +1,97 @@
+name: 🛠️ Report an Issue
+description: Report a bug, suggest a feature, or ask for help.
+title: "[MODULE] Short description"
+labels: ["needs triage"]
+body:
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      description: What type of issue are you creating?
+      options:
+        - 🐞 Bug Report
+        - ✨ Feature Request
+        - 📚 Documentation
+        - 🧠 Improvement Suggestion
+        - ❓ Question
+    validations:
+      required: true
+
+  - type: input
+    id: module
+    attributes:
+      label: Module or Section
+      description: Where does this issue occur? (e.g. Attendance, Student Dashboard, etc.)
+      placeholder: "e.g. Exam Module > Result Sheet"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the issue or suggestion clearly.
+      placeholder: "Tell us what is happening or what you propose."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "The system should..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? (for bugs)
+      placeholder: "Instead, it..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: For bugs, describe how to reproduce the issue step-by-step.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See the error
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Describe your development or deployment environment.
+      placeholder: |
+        - OS: Ubuntu 22.04
+        - Browser: Firefox 120
+        - Backend: Laravel 10
+        - Frontend: Vue 3
+        - Database: MySQL 8
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or Screenshots
+      description: Include relevant logs, screenshots, or screen recordings.
+    validations:
+      required: false
+
+  - type: input
+    id: related
+    attributes:
+      label: Related Issues
+      description: Link any related issue or pull request.
+      placeholder: "#15, #42"
+    validations:
+      required: false
